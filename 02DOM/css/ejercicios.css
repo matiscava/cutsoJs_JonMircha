@@ -1,0 +1,81 @@
+:root{
+  --yellow-color: #f7df1e;
+  --dark-color: #222;
+}
+*{
+  margin: 0;
+}
+
+/*Estilos de los ejercicios*/
+body{
+  position: relative;
+}
+
+.title{
+  background-color: var(--yellow-color) ;
+  color: var(--dark-color);
+  padding: 2rem;
+  text-align: center;
+}
+.title h1 {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+#secciones{
+  width: 100%;
+}
+.seccion{
+  text-align: center;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.seccion h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.btnHamburguesa{
+  position:fixed;
+  bottom: 5%;
+  right: 5%;
+  padding: 1rem;
+  background-color: #f7df1e;
+  border-radius: 60%;
+  cursor: pointer;
+  z-index: 10001;
+  transition: .5s;
+}
+.btnHamburguesa:hover {
+  box-shadow: 0 0 13px 2px #859143;
+}
+
+.btnHamburguesa span{
+  font-size: 25px;
+  transition: 0.5s;
+}
+.disable {
+  display: none;
+}
+.hiddenMenu{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -1000px;
+  background-color: rgba(34, 34, 34, 0.603);
+  z-index: 10000;
+  transition: 0.5s;
+}
+.hiddenMenu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column ;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+.hiddenMenu a {
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f7df1e;
+  font-weight: bold;
+}

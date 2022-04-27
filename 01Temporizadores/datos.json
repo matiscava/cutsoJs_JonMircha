@@ -1,0 +1,11 @@
+{
+  "cadena": "Matias",
+  "numero": 31,
+  "boolenao": false,
+  "arreglo": [1,"texto", true],
+  "objeto": {
+    "facebook": "/matiscava",
+    "email": "matiscava@gmail.com"
+  },
+  "nulo": null
+}

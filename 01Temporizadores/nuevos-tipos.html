@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevos Tipos de Datos en JavaScript</title>
+</head>
+<body>
+  <h1>Nuevos Tipos de Datos en JavaScript</h1>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <script>
+
+    /*SYMBOL*/
+
+    /* Los simbolos nos permiten crear identificadores únicos */
+    // let id = Symbol('id');//lo que se encuentra dentro es para poder identificar el simbolo
+    //Los simbolos sirven para identificar las propiedades de un objeto
+
+    // console.log(typeof id, id);
+    
+    // const NAME = Symbol();
+    // const HI = Symbol();
+
+
+    // const persona = {
+    //   [NAME]:'Matías',
+    //   edad: 31
+    // }
+    // console.log(persona);
+
+    // persona.NAME = 'Matías Nicolás'
+
+    // console.log(persona);
+    // console.log(persona.NAME);
+    // console.log(persona[NAME]);
+
+    // persona[HI] = () => {
+    //   console.log('Hello');
+    // }
+
+    // console.log(persona);
+
+    // persona[HI]()
+
+    // for (const propiedad in persona) {
+    //   console.log(propiedad);
+    //   console.log(persona[propiedad]);
+    // }
+
+    // console.log(Object.getOwnPropertySymbols(persona));
+
+    //SETS
+
+    // const set = new Set([1,2,3,3,4,5,true,false,{},{},'hola','HOLA'])
+    // console.log(set);
+    // console.log(set.size);
+
+    // const setDos = new Set();
+    // setDos.add(1)
+    // setDos.add(2)
+    // setDos.add(2)
+    // setDos.add(3)
+    // setDos.add(true)
+    // setDos.add(false)
+    // setDos.add(true)
+    // setDos.add({})
+
+    // console.log(setDos);
+    // console.log(setDos.size);
+
+    // console.log('Recorriendo set');
+    // for (const item of set) {
+    //   console.log(item);
+    // }
+
+    // console.log('Recorriendo setDos');
+    // setDos.forEach(item => console.log(item));
+    // let arr = Array.from(set)
+    // console.log(arr[0]);
+    // set.delete('HOLA')
+    // console.log(set);
+    // console.log(set.has('hola'));
+    // console.log(setDos.has(2));
+    // console.log(setDos.has('chau'));
+
+    // setDos.clear()
+    // console.log(setDos);
+
+    //MAPS
+
+    // const mapa = new Map();
+    // mapa.set('nombre','Matias')
+    // mapa.set('apellido','Scavarelli')
+    // mapa.set('edad',31)
+
+    // console.log(mapa);
+    // console.log(mapa.size);
+    // console.log(mapa.has('correo'));
+    // console.log(mapa.has('nombre'));
+    // console.log(mapa.get('nombre'));
+
+    // mapa.set('nombre','Matías Nicolas')
+    // console.log(mapa.get('nombre'));
+
+    // mapa.delete('apellido')
+
+    // mapa.set(19,'diecinueve')
+    // mapa.set(true,'verdadero')
+    // mapa.set({},{})
+
+
+    // console.log(mapa);
+
+    // for (const [key,value] of mapa) {
+    //   console.log(`Llave: ${key}, Valor: ${value}`);      
+    // }
+
+    // const mapa2 = new Map([
+    //   ["nombre", "Jaimito"],
+    //   ["edad",9],
+    //   ["animal","perro"],
+    //   [null,"nulo"]
+    // ])
+
+    // console.log(mapa2);
+    // const llaveMapa2 = [...mapa2.keys()]
+    // const valoresMapa2 = [...mapa2.values()]
+
+    // console.log(llaveMapa2);
+    // console.log(valoresMapa2);
+
+    //WEAKSETS
+
+    // const ws = new WeakSet()
+
+    // let valor1 = {"valor1":1}
+    // let valor2 = {"valor2":2}
+    // let valor3 = {"valor3":3}
+
+    // ws.add(valor1)
+    // ws.add(valor2)
+    // console.log(ws);
+
+    // console.log(ws.has(valor1));
+    // console.log(ws.has(valor3));
+    
+    // ws.delete(valor2)
+    // console.log(ws);
+
+    // ws.add(valor2)
+    // ws.add(valor3)
+    // console.log(ws);
+
+    // setInterval(() => console.log(ws),1000)
+    
+    // setTimeout(() => {
+    //   valor1 = null
+    //   valor2 = null
+    //   valor3 = null 
+    // },5000)
+
+    //WEAKMAPS
+
+    // const wm = new WeakMap([
+    //   ["nombre", "Jaimito"],
+    //   ["edad",9],
+    //   ["animal","perro"],
+    //   [null,"nulo"]
+    // ])
+    // No se declara de esa manera, al igual que el weakSet se hace a rtaves de objetos ya declarados
+
+    // const wm = new WeakMap();
+
+    // let llave1 = {}
+    // let llave2 = {}
+    // let llave3 = {}
+
+    // wm.set(llave1,1)
+    // wm.set(llave2,2)
+
+    // console.log(wm);
+
+    // console.log(wm.has(llave1));
+    // console.log(wm.has(llave3));
+
+    
+    // console.log(wm.get(llave1));
+    // console.log(wm.get(llave2));
+    // console.log(wm.get(llave3));
+
+    // wm.delete(llave2)
+    // console.log(wm);
+
+    // wm.set(llave2,2)
+    // wm.set(llave3,3)
+    // console.log(wm);
+
+    // setInterval(() => console.log(wm),1000)
+    
+    // setTimeout(() => {
+    //   llave1 = null
+    //   llave2 = null
+    //   llave3 = null 
+    // },5000)
+
+    //ITERATOR & ITERABLES
+
+    // const iterable = [1,2,3,4,5];
+    // // const iterable = "Hola Mundo";
+    // // const iterable = new Set([1,2,3,3,4,5,true,false,true]);
+    // // const iterable = new Map([["nombre","Jon"],["edad",31]]);
+
+    // const iterator = iterable[Symbol.iterator](); //accede a la interas del iterador
+
+    // console.log(iterable);
+    // console.log(iterator);
+    // // console.log(iterator.next());
+    // // console.log(iterator.next());
+    // // console.log(iterator.next());
+    // // console.log(iterator.next());
+    // // console.log(iterator.next());
+
+    // let next = iterator.next()
+    // while (!next.done) {
+    //   console.log(next.value);
+    //   next = iterator.next()       
+    // }
+
+    // function* iterable () { //al ponerle el asterisco pegada a la funcion le dice a js que es una funcion generadora
+    //   yield "hola" //es como un return para para cargar valores
+    //   console.log('Hola consola');
+    //   yield "hola 2"
+    //   console.log('Seguimos con mas instrucciones de nuestro código');
+    //   yield "hola 3"
+    //   yield "hola 4"
+    // }
+
+    // let iterador = iterable();
+    // let next = iterador.next()
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+
+    // for (const y of iterador) {
+    //   console.log(y);
+    // }
+
+    // const arr = [...iterable()]
+    // console.log(arr);
+
+    // function cuadrado (valor){
+    //   setTimeout(()=>{
+    //     return console.log({valor, resultado: valor*valor});
+    //   }, Math.random()*1000)
+    // }
+
+    // function* generador(){
+    //   console.log('Inicio Generador');
+    //   yield cuadrado(0)
+    //   yield cuadrado(1)
+    //   yield cuadrado(2)
+    //   yield cuadrado(3)
+    //   yield cuadrado(4)
+    //   yield cuadrado(5)
+    //   console.log('Termina Generador');
+    // }
+
+    // let gen = generador();
+
+    // for (const y of gen) {
+    //   console.log(y);
+    // }
+
+    //PROXIES
+
+    // const persona = {
+    //   nombre: "",
+    //   apellido: "",
+    //   edad: 0
+    // }
+
+    // const manejador = {
+    //   set(obj,prop,valor) {
+    //     if(Object.keys(obj).indexOf(prop) === -1) {
+    //       //Busca que en el objeto exista la propiedad asignada
+    //       return console.error(`La propiedad "${prop}", no existe en el objeto persona `);
+    //     }
+
+    //     if(
+    //       (prop === "nombre" || (prop) === "apellido") &&
+    //       !(/^[A-Za-zÑñáéíóuÁÉÍÓÚüÜ]+$/g.test(valor))
+    //     ){
+    //       return console.error(`La propiedad "${prop}", solo acepta letra y espacios en blanco`);
+
+    //     }
+
+    //     obj[prop] = valor
+    //   }
+    // }
+    // const mati = new Proxy(persona, manejador);
+    // mati.nombre = "Matias"
+    // mati.apellido = "Scavarelli"
+    // mati.edad = 31
+    // mati.twiter = "@matiscava"
+    // console.log(mati);
+    // console.log(persona);
+
+    //PROPIEDADES DINAMICAS
+
+    // let aleatorio = Math.round(Math.random()*100+5)
+    // const objUsuarios = {
+    //   [`id_${aleatorio}`]: "Valor aleatorios"//creo una propiedad dinámica con los corchetes
+    // }
+    // const usuarios = ['mati','valen','carla','Lean','Lucas'];
+    // console.log(objUsuarios);
+    // usuarios.forEach((usu,index) => objUsuarios[`id_${index}  `]=usu);
+    // console.log(objUsuarios);
+
+    //THIS
+
+    // console.log(this);
+    // console.log(window);
+    // console.log(this === window); //devuelve true, porque estan en el mismo contexto
+
+    // this.nombre = "Contexto Global"
+    // console.log(this.nombre);
+
+    // function imprimir (){
+    //   console.log(this.nombre);
+    // }
+
+    // imprimir()
+    // const obj = {
+    //   nombre: "contexto Objeto",
+    //   imprimir: function () {
+    //     console.log(this.nombre);
+    //   }
+    // }
+
+    // obj.imprimir()
+
+    // const obj2 = {
+    //   nombre: "contexto Objeto 2",
+    //   imprimir
+    // }
+
+    // obj2.imprimir()
+
+    // const obj3 = {
+    //   nombre: "contexto Objeto 3",
+    //   imprimir: () =>{
+    //     console.log(this.nombre);
+    //   }
+    // }
+
+    // obj3.imprimir() //la arrow function hereda el contexto/scope del padre
+
+
+    // function Persona(nombre) {
+    //   const that = this;
+    //   // this.nombre = nombre;
+    //   that.nombre = nombre
+    //   // return console.log(this.nombre);
+    //   // return function () {
+    //   //   console.log(this.nombre) 
+    //   // } //devuelve el contexto padre, ya que no tienen dentro de esa función la propiedad nombre.
+    
+    //   // return () => console.log(this.nombre,77)
+    //   return function () {
+    //     console.log(that.nombre,55) 
+    //   }
+      
+    // }
+
+    // let mati = new Persona('Mati')
+    // mati()
+
+    //CALL,APPLY & BIND
+
+    // this.lugar = "Contexto Global"
+    // this.nombre = "Contexto Global"
+
+
+    // // function saludar(){
+    // //   console.log(`${this.lugar}`);
+    // // }
+    // function saludar(saludo,aQuien){
+    //   console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+    // }
+    // const obj = {
+    //   lugar: "Contexto Objeto",
+    // }
+    
+    // saludar('Hola', 'chiche')
+    // saludar.call(obj,'hi','Carmen') //llama al objeto
+    // saludar.call(this,'hola','Mati') 
+    // saludar.call(null,'hola','Chiche') 
+
+    // saludar.apply(obj,['adios','Matias']) //llama al objeto
+    // saludar.call(this,'Chau','Mati') 
+    // saludar.call(null,'Chau','Chiche') 
+    
+    // const persona = {
+    //   nombre : 'Matias',
+    //   saludar: function () {
+    //     console.log(`HOla ${this.nombre}`);
+    //   }
+    // }
+
+    // persona.saludar()
+
+    // const otraPersona = {
+    //   // saludar: persona.saludar
+    //   // saludar: persona.saludar.bind(persona) //enlaza el contexto de persna, sino tira undefined
+    //   saludar: persona.saludar.bind(this)
+    // }
+
+    // otraPersona.saludar()
+
+    //JSON
+
+    const json = {
+      cadena: "Matias",
+      numero: 31,
+      boolenao: false,
+      arreglo: [1,"texto", true],
+      objeto: {
+        facebook: "/matiscava",
+        email: "matiscava@gmail.com"
+      },
+      nulo: null
+    }
+
+    
+
+
+
+  </script>
+</body>
+</html>
