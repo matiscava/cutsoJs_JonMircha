@@ -34,8 +34,9 @@
       <a href="#seccion-10" data-scroll-spy>Filtros de Busqueda</a>
       <a href="#seccion-11" data-scroll-spy>Sorteo Digital</a>
       <a href="#seccion-12" data-scroll-spy>Responsive Slider</a>
-      <a href="#seccion-13" data-scroll-spy>Sección 13</a>
-      <a href="#seccion-14" data-scroll-spy>Sección 14</a>
+      <a href="#seccion-13" data-scroll-spy>Video Inteligente</a>
+      <a href="#seccion-14" data-scroll-spy>Validaciones de Formulario</a>
+      <a href="#seccion-15" data-scroll-spy>Narrador</a>
     </nav>
   </aside>
   <main>
@@ -160,10 +161,37 @@
       </div>
     </section>    
     <section id="seccion-13" class="section" data-scroll-spy>
-      <h2>Sección 13</h2>
+      <h2>Video Inteligente</h2>
+      <video src="./assets/IMG_1960.MP4" id="video-01" muted controls loop data-smart-video></video>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <video src="./assets/IMG_0675.3GP" id="video-02" muted controls loop data-smart-video></video>
+
     </section>    
     <section id="seccion-14" class="section" data-scroll-spy>
-      <h2>Sección 14</h2>
+      <h2>Validaciones de Formulario</h2>
+      <form class="contact-form">
+        <legend>Envíano tus Comentarios</legend>
+        <input type="text" name="name" placeholder="Escribe tu nombre" title="El nombre solo acepta letras y espacios en blanco" pattern="^[a-zA-ZÑñÁÉÍÓÚáéíóúüÜ\s]+$" required>
+        <input type="email" name="email" placeholder="Esctibe tu email" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
+        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+        <input type="submit" value="Enviar">
+        <div class="contact-form-loader none">
+          <img src="./assets/hearts.svg" alt="Cargando">
+        </div>
+        <div class="contact-form-response none">
+          <p>Los datos han sido enviados</p>
+        </div>
+      </form>
+
+    </section>
+    <section id="seccion-15" class="section" data-scroll-spy>
+      <h2>Narrador</h2>
+      <select id="speech-select">
+        <option value="">-- Elige una Voz --</option>
+      </select>
+      <textarea placeholder="Ingresa texto para leerlo..." id="speech-text" cols="50" rows="5"></textarea>
+      <button id="speech-btn">Leer Texto</button>
     </section>
   </main>
   <button class="scroll-top-btn hidden" type="button">&#11014;</button>

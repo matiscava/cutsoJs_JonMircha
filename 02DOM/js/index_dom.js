@@ -14,6 +14,9 @@ import searchFilters from "./dom/filtro_busquedas.js";
 import draw from "./dom/sorteo.js";
 import slider from "./dom/carrusel.js";
 import scrollSpy from "./dom/scroll_espia.js";
+import smartVideo from "./dom/video_inteligente.js";
+import contactFormValidations from "./dom/validaciones_formulario.js";
+import speechReader from "./dom/narrador.js";
 
 const d = document;
 
@@ -47,12 +50,14 @@ d.addEventListener('DOMContentLoaded', (e) => {
     );
   responsiveTester('responsive-tester');
   userDeviceInfo('user-device');
-  webcam('webcam')
-  getGeolocation('geolocation')
-  searchFilters('#card-filter','.card')
-  draw('realizar-sorteo','.sorteo')
-  slider()
-  scrollSpy()
+  webcam('webcam');
+  getGeolocation('geolocation');
+  searchFilters('#card-filter','.card');
+  draw('realizar-sorteo','.sorteo');
+  slider();
+  scrollSpy();
+  smartVideo();
+  contactFormValidations();
 })
 
 d.addEventListener('keydown' , (e) => {
@@ -60,5 +65,6 @@ d.addEventListener('keydown' , (e) => {
   moveBall(e,'#circulo','#rectangulo');
 })
 
-darkTheme('.dark-theme-btn','dark-mode')
-networkStatus()
+darkTheme('.dark-theme-btn','dark-mode');
+networkStatus();
+speechReader();
