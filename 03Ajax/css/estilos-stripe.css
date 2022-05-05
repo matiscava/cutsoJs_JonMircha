@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+.empanadas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empanadas > * {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.empanada {
+  background-color: rgb(113, 201, 201);
+  color: rgb(255, 241, 112);
+  font-size: 125%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.empanada:hover{
+  opacity: .9;
+  transform: scale(.9);
+}
+
+.empanada img {
+  width: 100%;
+  height: auto;
+}
+
+.empanada figcaption{
+  padding: 1rem;
+}
